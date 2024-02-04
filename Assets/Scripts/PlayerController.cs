@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
                 rotationCoroutine = StartCoroutine(RotatePlayerSmoothly(90.0f, 1.0f));
             }
         }
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             if (rotationCoroutine == null)
             {
