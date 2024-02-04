@@ -30,18 +30,32 @@ public class PlayerController : MonoBehaviour
         {
             if (rotationCoroutine == null)
             {
-                rotationCoroutine = StartCoroutine(RotatePlayerSmoothly(90.0f, 2.5f));
+                rotationCoroutine = StartCoroutine(RotatePlayerMoreSmoothly(90.0f, 2.5f));
             }
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             if (rotationCoroutine == null)
             {
-                rotationCoroutine = StartCoroutine(RotatePlayerSmoothly(-90.0f, 2.5f));
+                rotationCoroutine = StartCoroutine(RotatePlayerMoreSmoothly(-90.0f, 2.5f));
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (rotationCoroutine == null)
+            {
+                rotationCoroutine = StartCoroutine(RotatePlayerSmoothly(90.0f, 1.0f));
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (rotationCoroutine == null)
+            {
+                rotationCoroutine = StartCoroutine(RotatePlayerSmoothly(-90.0f, 1.0f));
             }
         }
     }
-    IEnumerator RotatePlayerSmoothly(float angle, float intensity)
+    IEnumerator RotatePlayerMoreSmoothly(float angle, float intensity)
     {
         var playerTransform = playerObject.transform;
         var targetRotation = playerTransform.rotation * Quaternion.Euler(0.0f, 0.0f, angle);
@@ -60,4 +74,23 @@ public class PlayerController : MonoBehaviour
             yield return null;
         }
     }
+    IEnumerator RotatePlayerSmoothly(float angle, float duration)
+    {
+        var playerTransform = playerObject.transform;
+        var startRotation = playerTransform.rotation;
+        var targetRotation = playerTransform.rotation * Quaternion.Euler(0.0f, 0.0f, angle);
+
+        float elapsedTime = 0.0f;
+        while (elapsedTime < duration)
+        {
+            float t = Mathf.SmoothStep(0.0f, 1.0f, elapsedTime / duration);
+            playerTransform.rotation = Quaternion.Slerp(startRotation, targetRotation, t);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        playerTransform.rotation = targetRotation;
+        rotationCoroutine = null; // Reset the coroutine
+    }
+
 }
