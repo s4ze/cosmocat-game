@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShipLogic : MonoBehaviour
 {
+       
     [SerializeField]
-    private float health = 200f;
+    public float health = 200f;
+
+    public float HP;
 
     [SerializeField]
     private float minDamage = 3;
@@ -14,6 +18,7 @@ public class ShipLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        HP = health;
         
     }
 
@@ -24,17 +29,21 @@ public class ShipLogic : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if(GameObject.Find("Shield(Clone)") == null)
         {
-            if (health > 0)
-            {
-                health -= Random.Range(minDamage, maxDamage);
-            }
-            if (health < 0)
-            {
-                Destroy(gameObject);
-            }
+            if (collision.CompareTag("Enemy"))
+                {
+                    if (HP > 0)
+                    {
+                    HP -= Random.Range(minDamage, maxDamage);
+                    }
+                    if (HP < 0)
+                    {
+                        Destroy(gameObject);
+                    }
 
+                }
         }
+        
     }
 }
