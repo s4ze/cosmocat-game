@@ -92,5 +92,4 @@ public class PlayerController : MonoBehaviour
         playerTransform.rotation = targetRotation;
         rotationCoroutine = null; // Reset the coroutine
     }
-
 }
