@@ -575,7 +575,6 @@ MonoBehaviour:
   left: {fileID: 1353026253862346891, guid: 30148e2650852f248b852b027138b41d, type: 3}
   right: {fileID: 5411270307591326431, guid: c34a4170092aed94d8bf0370e1df7640, type: 3}
   warning: {fileID: 6620158047756553756, guid: da252714f22d7f249ac1cdc27988e564, type: 3}
-  ship: {fileID: 2121127832}
   xLTop: -6.6
   xRTop: 6
   xLBottom: -6.6
@@ -949,7 +948,6 @@ GameObject:
   - component: {fileID: 1258026659}
   - component: {fileID: 1258026658}
   - component: {fileID: 1258026657}
-  - component: {fileID: 1258026661}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1041,89 +1039,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1258026661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258026656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f10f3e5edc9b624aa4851a25edbf05d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  top: {fileID: 0}
-  bottom: {fileID: 0}
-  left: {fileID: 0}
-  right: {fileID: 0}
-  warning: {fileID: 0}
-  ship: {fileID: 0}
-  xLTop: -10.69
-  xRTop: 10.72
-  xLBottom: -10.69
-  xRBottom: 10.72
-  yTRight: -10.69
-  yBRight: 10.72
-  yTLeft: -10.69
-  yBLeft: 10.72
-  minBeforeSpawnWave:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  maxBeforeSpawnWave:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  spawnWaveMin:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  spawnWaveMax:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  warningSpawn:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  spawnRate:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  quantity: 0000000000000000000000000000000000000000000000000000000000000000
-  levelLogic: 0000000000000000000000000000000000000000000000000000000000000000
-  maxWave: 0000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &1277361983
 GameObject:
   m_ObjectHideFlags: 0

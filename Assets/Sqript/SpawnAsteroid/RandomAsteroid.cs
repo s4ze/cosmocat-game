@@ -22,7 +22,7 @@ public class RandomAsteroid : MonoBehaviour
 
     float RandX;
     float RandY;
-    public ShipLogic ship;
+    
 
     [SerializeField]
     private float xLTop = -10.69f;
@@ -104,15 +104,20 @@ public class RandomAsteroid : MonoBehaviour
         nextBeforeSpawnWave = Time.time + Random.Range(minBeforeSpawnWave[level], maxBeforeSpawnWave[level] + 1);
         nextSpawnWave = Random.Range(spawnWaveMin[level], spawnWaveMax[level] + 1);
         nextWarningSpawn = nextBeforeSpawnWave - warningSpawn[level];
-        ship = FindObjectOfType<ShipLogic>();
+        //ship = FindObjectOfType<ShipLogic>();
     }
 
 
     void Update()           
     {
-        Debug.Log(ship == null);
-        
-        if (level < 7 && ship.allMetal >= levelLogic[level])
+        //Debug.Log(ship.allMetal >= levelLogic[level]);
+        //Debug.Log(ship == null);
+        Debug.Log("AllMetal: " + ShipLogic.Instance.allMetal);
+        Debug.Log("Array contents: " + string.Join(", ", levelLogic));
+
+        //Debug.Log(level);
+        Debug.Log("Level Logic: "+levelLogic[level]);
+        if (level < 7 && ShipLogic.Instance.allMetal >= levelLogic[level])
          {
                         level++;
 

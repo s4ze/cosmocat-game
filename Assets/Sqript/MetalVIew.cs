@@ -6,7 +6,9 @@ using TMPro;
 public class MetalVIew : MonoBehaviour
 {
     public TextMeshProUGUI myTextMeshPro;
-    public ShipLogic metal;
+
+    [SerializeField]
+    private ShipLogic metal;
     // Start is called before the first frame update
     void Start()
     {
