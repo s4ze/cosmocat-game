@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Destroy
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -11,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - top
+  - bottom
   - 
   - 
   - 
@@ -44,6 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
-    uniqueID: 1076869425
+  - name: Bottom
+    uniqueID: 3283560487
+    locked: 0
+  - name: top
+    uniqueID: 2630737219
     locked: 0

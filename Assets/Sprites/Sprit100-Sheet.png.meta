@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d54fc534fe92edb4b839c9346805e370
+guid: aee27614e042cd141a2ecca4bb26f71d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,19 +69,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
-    resizeAlgorithm: 1
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -119,165 +106,152 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spri100-Sheet_0
+      name: Sprit100-Sheet_0
       rect:
         serializedVersion: 2
         x: 23
         y: 24
         width: 81
         height: 81
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 497f35e310830cc4c8a48716a81a2024
-      internalID: -696096669
+      spriteID: 61c001b0604bcaa4c8ecea67cf40ecb3
+      internalID: 1444735192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spri100-Sheet_1
+      name: Sprit100-Sheet_1
       rect:
         serializedVersion: 2
         x: 151
         y: 24
         width: 81
         height: 81
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66bff91d38007dd4eb5219d823d69a82
-      internalID: -1350389191
+      spriteID: 0e18aa58903c4d74eb77eff5cfd62b20
+      internalID: -1351713261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spri100-Sheet_2
+      name: Sprit100-Sheet_2
       rect:
         serializedVersion: 2
         x: 279
         y: 24
         width: 81
         height: 81
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c005ebd82891547419614d87e7317763
-      internalID: -225758763
+      spriteID: 0cf4863863c458845b3c83b122f06ea4
+      internalID: -1992306707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spri100-Sheet_3
+      name: Sprit100-Sheet_3
       rect:
         serializedVersion: 2
         x: 407
         y: 24
         width: 85
         height: 81
-      alignment: 9
-      pivot: {x: 0.4764706, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71fbfb24b3de06844a009d9e95cff76e
-      internalID: 1930312765
+      spriteID: 500c4a1efd50a4d4ca7151d141123ea1
+      internalID: 903509302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spri100-Sheet_4
+      name: Sprit100-Sheet_4
       rect:
         serializedVersion: 2
         x: 535
         y: 24
         width: 90
         height: 81
-      alignment: 9
-      pivot: {x: 0.45, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47652911bcaf1ca469fc10748ac117ff
-      internalID: 947114457
+      spriteID: d7b139256534a0246a539e6522c1af9a
+      internalID: -905403005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spri100-Sheet_5
+      name: Sprit100-Sheet_5
       rect:
         serializedVersion: 2
         x: 663
         y: 24
         width: 90
         height: 81
-      alignment: 9
-      pivot: {x: 0.45, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 411902e8dd74fab418ef003806b40f6d
-      internalID: 579913812
+      spriteID: c8e6b772d4ff5664e98565c71b8bc431
+      internalID: -7885546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spri100-Sheet_6
+      name: Sprit100-Sheet_6
       rect:
         serializedVersion: 2
         x: 791
         y: 24
         width: 88
         height: 81
-      alignment: 9
-      pivot: {x: 0.46022728, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74a6705f2a8523041a8f5226d13ae6b1
-      internalID: 1336732777
+      spriteID: 7e7767e4c0d7ceb47bb54bc296c0bb17
+      internalID: 1353032869
       vertices: []
       indices: 
       edges: []
@@ -293,13 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Spri100-Sheet_0: -696096669
-      Spri100-Sheet_1: -1350389191
-      Spri100-Sheet_2: -225758763
-      Spri100-Sheet_3: 1930312765
-      Spri100-Sheet_4: 947114457
-      Spri100-Sheet_5: 579913812
-      Spri100-Sheet_6: 1336732777
+      Sprit100-Sheet_0: 1444735192
+      Sprit100-Sheet_1: -1351713261
+      Sprit100-Sheet_2: -1992306707
+      Sprit100-Sheet_3: 903509302
+      Sprit100-Sheet_4: -905403005
+      Sprit100-Sheet_5: -7885546
+      Sprit100-Sheet_6: 1353032869
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d54fc534fe92edb4b839c9346805e370
+guid: 89d8dfa55fb7d894ba18d9a8d4e9acf6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,23 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
-    resizeAlgorithm: 1
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,165 +106,152 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spri100-Sheet_0
+      name: Cat100-Sheet_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 24
-        width: 81
-        height: 81
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+        x: 47
+        y: 37
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 497f35e310830cc4c8a48716a81a2024
-      internalID: -696096669
+      spriteID: 3dab4f5a767c8d849af83dac61053f5f
+      internalID: -92375053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spri100-Sheet_1
+      name: Cat100-Sheet_1
       rect:
         serializedVersion: 2
-        x: 151
-        y: 24
-        width: 81
-        height: 81
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        x: 172
+        y: 37
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 1, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66bff91d38007dd4eb5219d823d69a82
-      internalID: -1350389191
+      spriteID: 19b1fe73de12b484e96c365cf06d7b22
+      internalID: 264100121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spri100-Sheet_2
+      name: Cat100-Sheet_2
       rect:
         serializedVersion: 2
-        x: 279
-        y: 24
-        width: 81
-        height: 81
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+        x: 299
+        y: 37
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c005ebd82891547419614d87e7317763
-      internalID: -225758763
+      spriteID: b6328342ab80ca34498ace4dd86eae70
+      internalID: -114132852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spri100-Sheet_3
+      name: Cat100-Sheet_3
       rect:
         serializedVersion: 2
-        x: 407
-        y: 24
-        width: 85
-        height: 81
-      alignment: 9
-      pivot: {x: 0.4764706, y: 0.5}
+        x: 431
+        y: 38
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71fbfb24b3de06844a009d9e95cff76e
-      internalID: 1930312765
+      spriteID: 336ffebecc124234597320829fbde598
+      internalID: -1271268229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spri100-Sheet_4
+      name: Cat100-Sheet_4
       rect:
         serializedVersion: 2
-        x: 535
-        y: 24
-        width: 90
-        height: 81
-      alignment: 9
-      pivot: {x: 0.45, y: 0.5}
+        x: 557
+        y: 39
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47652911bcaf1ca469fc10748ac117ff
-      internalID: 947114457
+      spriteID: 2f653f45b15e66c4fba6e90d60f269e3
+      internalID: -1859477316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spri100-Sheet_5
+      name: Cat100-Sheet_5
       rect:
         serializedVersion: 2
-        x: 663
-        y: 24
-        width: 90
-        height: 81
-      alignment: 9
-      pivot: {x: 0.45, y: 0.5}
+        x: 685
+        y: 40
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 411902e8dd74fab418ef003806b40f6d
-      internalID: 579913812
+      spriteID: 98d0cf71c9aaa844ca7e84eb51cc47bf
+      internalID: -802826960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spri100-Sheet_6
+      name: Cat100-Sheet_6
       rect:
         serializedVersion: 2
-        x: 791
-        y: 24
-        width: 88
-        height: 81
-      alignment: 9
-      pivot: {x: 0.46022728, y: 0.5}
+        x: 810
+        y: 40
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74a6705f2a8523041a8f5226d13ae6b1
-      internalID: 1336732777
+      spriteID: 380067051d0c86e43924a56eeb5bdb9f
+      internalID: -744533961
       vertices: []
       indices: 
       edges: []
@@ -293,13 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Spri100-Sheet_0: -696096669
-      Spri100-Sheet_1: -1350389191
-      Spri100-Sheet_2: -225758763
-      Spri100-Sheet_3: 1930312765
-      Spri100-Sheet_4: 947114457
-      Spri100-Sheet_5: 579913812
-      Spri100-Sheet_6: 1336732777
+      Cat100-Sheet_0: -92375053
+      Cat100-Sheet_1: 264100121
+      Cat100-Sheet_2: -114132852
+      Cat100-Sheet_3: -1271268229
+      Cat100-Sheet_4: -1859477316
+      Cat100-Sheet_5: -802826960
+      Cat100-Sheet_6: -744533961
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
