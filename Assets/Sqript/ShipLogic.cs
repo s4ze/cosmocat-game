@@ -9,6 +9,9 @@ public class ShipLogic : MonoBehaviour
     [SerializeField]
     public float health = 200f;
 
+    public int metal = 3;
+    public int allMetal = 3;
+
     public float HP;
 
     [SerializeField]
@@ -25,6 +28,11 @@ public class ShipLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            metal += 3;
+            allMetal = metal;
+        }
         
     }
     private void OnTriggerEnter2D(Collider2D collision)

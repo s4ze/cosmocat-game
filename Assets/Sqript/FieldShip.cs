@@ -21,11 +21,11 @@ public class FieldShip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > nextField && Input.GetKeyDown(KeyCode.S))
+        if (/*Time.time > nextField && */Input.GetKeyDown(KeyCode.S))
         {
             GameObject Asteroid = Instantiate(field, new Vector2(0,0), Quaternion.identity);
-            Destroy(Asteroid, 3f);
-            nextField = Time.time + 3f + recharge;
+           /* Destroy(Asteroid, 3f);
+            nextField = Time.time + 3f + recharge;*/
         }
     }
 }
