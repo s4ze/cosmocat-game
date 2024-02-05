@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
+<<<<<<< Updated upstream
         {
             if (rotationCoroutine == null)
             {
@@ -41,6 +42,8 @@ public class PlayerController : MonoBehaviour
             }
         }
         if (Input.GetKeyDown(KeyCode.W))
+=======
+>>>>>>> Stashed changes
         {
             if (rotationCoroutine == null)
             {
