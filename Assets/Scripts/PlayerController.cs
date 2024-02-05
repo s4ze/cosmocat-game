@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _jumpForce;
     [SerializeField] private ContactFilter2D _platform;
     private Rigidbody2D _rigidBody;
+
+    public Animator animator; // ���������� ��� ����
     private bool _isOnPlatform => _rigidBody.IsTouching(_platform);
     private void Awake()
     {
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
     Coroutine rotationCoroutine;
     private void Update()
     {
+        animator.SetBool("IsFlying 0", false);
         if (Input.GetKeyDown(KeyCode.W))
         {
             if (rotationCoroutine == null)
@@ -87,6 +90,8 @@ public class PlayerController : MonoBehaviour
             playerTransform.rotation = Quaternion.Slerp(startRotation, targetRotation, t);
             elapsedTime += Time.deltaTime;
             yield return null;
+            //�������� �� ����� ���� ��� ����������
+            animator.SetBool("IsFlying 0", true);
         }
 
         playerTransform.rotation = targetRotation;
