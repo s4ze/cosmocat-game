@@ -26,28 +26,28 @@ public class PlayerController : MonoBehaviour
     Coroutine rotationCoroutine;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             if (rotationCoroutine == null)
             {
                 rotationCoroutine = StartCoroutine(RotatePlayerMoreSmoothly(90.0f, 2.5f));
             }
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             if (rotationCoroutine == null)
             {
                 rotationCoroutine = StartCoroutine(RotatePlayerMoreSmoothly(-90.0f, 2.5f));
             }
         }
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             if (rotationCoroutine == null)
             {
                 rotationCoroutine = StartCoroutine(RotatePlayerSmoothly(90.0f, 1.0f));
             }
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             if (rotationCoroutine == null)
             {
