@@ -8,9 +8,7 @@ public class PlatformLogic : MonoBehaviour
     private float health = 200f;
 
     [SerializeField]
-    private float minDamage=3;
-    [SerializeField]
-    private float maxDamage = 40;
+    private float Damage=3;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +26,7 @@ public class PlatformLogic : MonoBehaviour
         {
             if(health > 0)
             {
-                health -= Random.Range(minDamage, maxDamage);
+                health -= Damage;
             }
             if(health < 0)
             {

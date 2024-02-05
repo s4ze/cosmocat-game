@@ -9,6 +9,9 @@ public class ShipLogic : MonoBehaviour
     [SerializeField]
     public float health = 200f;
 
+    [SerializeField]
+    public int plusMetal = 3;
+
     public int metal = 3;
     public int allMetal = 3;
 
@@ -25,9 +28,7 @@ public class ShipLogic : MonoBehaviour
     }
 
     [SerializeField]
-    private float minDamage = 3;
-    [SerializeField]
-    private float maxDamage = 40;
+    private float Damage = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,10 +41,16 @@ public class ShipLogic : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            metal += 3;
+            metal += plusMetal;
             allMetal = metal;
         }
         
+    }
+
+    public void NewMetal()
+    {
+        metal += 3;
+        allMetal = metal;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -53,7 +60,7 @@ public class ShipLogic : MonoBehaviour
                 {
                     if (HP > 0)
                     {
-                    HP -= Random.Range(minDamage, maxDamage);
+                    HP -= Damage;
                     }
                     if (HP < 0)
                     {

@@ -16,9 +16,12 @@ public class MetalVIew : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   void Update()
     {
-        myTextMeshPro.text = metal.allMetal.ToString();
+        if (metal != null && myTextMeshPro != null)
+        {
+            myTextMeshPro.text = metal.allMetal.ToString();
+        }
     }
 }
 
