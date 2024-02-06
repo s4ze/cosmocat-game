@@ -6,6 +6,7 @@ public class RIghtPlatformLogic : MonoBehaviour
 {
     [SerializeField]
     private float health = 200f;
+    float health2 = 0f;
     public static RIghtPlatformLogic Instance;
 
     private void Awake()
@@ -21,7 +22,7 @@ public class RIghtPlatformLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        health2 = health;
     }
 
     // Update is called once per frame
@@ -40,6 +41,7 @@ public class RIghtPlatformLogic : MonoBehaviour
             if (health < 0)
             {
                 ShipLogic.Instance.freely[1] = 0;
+                health = health2;
                 Destroy(gameObject);
             }
 

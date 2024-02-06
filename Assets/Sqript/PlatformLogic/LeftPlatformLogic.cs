@@ -7,6 +7,7 @@ public class LeftPlatformLogic : MonoBehaviour
     [SerializeField]
     private float health = 200f;
     public static LeftPlatformLogic Instance;
+    float health2 = 0f;
 
     private void Awake()
     {
@@ -21,7 +22,7 @@ public class LeftPlatformLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        health2 = health;
     }
 
     // Update is called once per frame
@@ -40,6 +41,7 @@ public class LeftPlatformLogic : MonoBehaviour
             if (health < 0)
             {
                 ShipLogic.Instance.freely[3] = 0;
+                health = health2;
                 Destroy(gameObject);
             }
 
