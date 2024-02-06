@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 99247f6f9d381534f80178fcb9fa96ec
+guid: ddb71e7b130f38c48a7a17b1ebed468e
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Kanyon
+  - Press Start 2P
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
