@@ -25,4 +25,12 @@ public class ButtonsScript : MonoBehaviour
     {
         Application.Quit();
     }
+    public void ToMenu()
+    {
+        SceneManager.LoadScene("menu");
+    }
+    public void ToRetry()
+    {
+        SceneManager.LoadScene("menu");
+    }
 }

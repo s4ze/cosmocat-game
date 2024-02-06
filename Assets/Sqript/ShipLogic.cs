@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ShipLogic : MonoBehaviour
@@ -50,17 +51,19 @@ public class ShipLogic : MonoBehaviour
         if(GameObject.Find("Shield(Clone)") == null)
         {
             if (collision.CompareTag("Enemy"))
+            {
+                if (HP > 0)
                 {
-                    if (HP > 0)
-                    {
-                    HP -= Random.Range(minDamage, maxDamage);
-                    }
-                    if (HP < 0)
-                    {
-                        Destroy(gameObject);
-                    }
+                HP -= Random.Range(minDamage, maxDamage);
+                }
+                if (HP < 0)
+                {
+                    Destroy(gameObject);
+                    SceneManager.LoadScene("Retry");
 
                 }
+
+            }
         }
         
     }
