@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject topShield;
     [SerializeField] GameObject playerObject;
     Coroutine rotationCoroutine;
+    public Animator animator;
     public void Start()
     {
         shieldPrevewDeactivate();
