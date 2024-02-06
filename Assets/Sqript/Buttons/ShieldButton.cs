@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ShieldButton : MonoBehaviour
@@ -186,7 +187,7 @@ public class ShieldButton : MonoBehaviour
     {
         if (nextSpawn < Time.time && ShipLogic.Instance.metal >= coast && !EnergyButton.Instance.Proof() && !RocketButton.Instance.Proof())
         {
-
+            AudioManager.instance.Play("ButtonClick");
             if (!top.activeSelf && ShipLogic.Instance.freely[0] == 0)
             {
                 topPreview.SetActive(true);

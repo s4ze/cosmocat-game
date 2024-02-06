@@ -180,6 +180,7 @@ public class RocketButton : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        AudioManager.instance.Play("ButtonClick");
         if (nextSpawn < Time.time && ShipLogic.Instance.metal >= coast && !topPreview.activeSelf && !bottomPreview.activeSelf && !leftPreview.activeSelf && !rightPreview.activeSelf && !EnergyButton.Instance.Proof() && !ShieldButton.Instance.Proof())
         {
 
