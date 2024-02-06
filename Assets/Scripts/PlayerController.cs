@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
         {
             if (rotationCoroutine == null)
             {
+                AudioManager.instance.Play("Rocket");
                 rotationCoroutine = StartCoroutine(RotatePlayerSmoothly(-90.0f, 1.0f));
             }
             if (top.activeSelf && nextDistroy < Time.time)
@@ -126,12 +127,14 @@ public class PlayerController : MonoBehaviour
         float elapsedTime = 0.0f;
         while (elapsedTime < duration)
         {
+            
             float t = Mathf.SmoothStep(0.0f, 1.0f, elapsedTime / duration);
             playerTransform.rotation = Quaternion.Slerp(startRotation, targetRotation, t);
             elapsedTime += Time.deltaTime;
             yield return null;
             //�������� �� ����� ���� ��� ����������
             animator.SetBool("IsFlying 0", true);
+            
         }
 
         playerTransform.rotation = targetRotation;

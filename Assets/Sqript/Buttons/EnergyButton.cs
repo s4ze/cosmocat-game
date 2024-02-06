@@ -186,7 +186,8 @@ public class EnergyButton : MonoBehaviour
     {
         if (nextSpawn < Time.time && ShipLogic.Instance.metal >= coast && !RocketButton.Instance.Proof() && !ShieldButton.Instance.Proof())
         {
-            
+            AudioManager.instance.Play("ButtonClick");
+
             if (!top.activeSelf && ShipLogic.Instance.freely[0] == 0)
             {
                 topPreview.SetActive(true);

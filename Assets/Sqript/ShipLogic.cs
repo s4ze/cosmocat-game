@@ -54,6 +54,7 @@ public class ShipLogic : MonoBehaviour
     {
         metal += 3;
         allMetal += 3;
+        AudioManager.instance.Play("CollectMetal");
     }
 
     public void MinusMetal(int i)
@@ -70,7 +71,8 @@ public class ShipLogic : MonoBehaviour
                 {
                     if (HP > 0)
                     {
-                    HP -= Damage;
+                        HP -= Damage;
+                        AudioManager.instance.Play("ShipDmg");
                     }
                     if (HP < 0)
                     {
