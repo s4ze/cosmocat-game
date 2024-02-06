@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ShipLogic : MonoBehaviour
 {
-       
+
     [SerializeField]
     public float health = 200f;
 
@@ -20,7 +20,7 @@ public class ShipLogic : MonoBehaviour
 
     public static ShipLogic Instance;
 
-    public int[] freely = { 0, 0, 0, 0};
+    public int[] freely = { 0, 0, 0, 0 };
 
     private void Awake()
     {
@@ -36,7 +36,7 @@ public class ShipLogic : MonoBehaviour
     void Start()
     {
         HP = health;
-        
+
     }
 
     // Update is called once per frame
@@ -47,7 +47,7 @@ public class ShipLogic : MonoBehaviour
             metal += plusMetal;
             allMetal = metal;
         }
-        
+
     }
 
     public void NewMetal()
@@ -64,7 +64,7 @@ public class ShipLogic : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(GameObject.Find("Shield(Clone)") == null)
+        if (GameObject.Find("Shield(Clone)") == null)
         {
             if (collision.CompareTag("Enemy"))
             {
@@ -79,12 +79,13 @@ public class ShipLogic : MonoBehaviour
                     {
                         Destroy(gameObject);
                         SceneManager.LoadScene("Retry");
+                        SceneManager.UnloadSceneAsync("AstroidMove");
                     }
 
                 }
 
             }
         }
-        
+
     }
 }
