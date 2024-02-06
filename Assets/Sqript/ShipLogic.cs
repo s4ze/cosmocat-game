@@ -50,7 +50,12 @@ public class ShipLogic : MonoBehaviour
     public void NewMetal()
     {
         metal += 3;
-        allMetal = metal;
+        allMetal += 3;
+    }
+
+    public void MinusMetal(int i)
+    {
+        metal -= i;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

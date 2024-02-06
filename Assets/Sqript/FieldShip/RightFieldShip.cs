@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FieldShip : MonoBehaviour
+public class RightFieldShip : MonoBehaviour
 {
-    public static FieldShip Instance;
+    // Start is called before the first frame update
+    public static RightFieldShip Instance;
 
     private void Awake()
     {
@@ -13,7 +14,7 @@ public class FieldShip : MonoBehaviour
         else
             Destroy(gameObject);
     }
-    
+
     [SerializeField]
     private float recharge = 5f;
 
@@ -24,7 +25,7 @@ public class FieldShip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -34,16 +35,13 @@ public class FieldShip : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-        
+
     }
 
-    public void NewView(int i)
+    public void NewView()
     {
-        if (i == 0)
-        {
-            gameObject.SetActive(true);
-            nextDistroy = Time.time + 10f;
-        }
-        
+        gameObject.SetActive(true);
+        nextDistroy = Time.time + recharge;
+
     }
 }

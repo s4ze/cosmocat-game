@@ -3,12 +3,26 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
     [SerializeField] private float _jumpForce;
     [SerializeField] private ContactFilter2D _platform;
     private Rigidbody2D _rigidBody;
 
+    public GameObject top;
+    public GameObject bottom;
+    public GameObject left;
+    public GameObject right;
+
     public Animator animator; // ���������� ��� ����
-    private bool _isOnPlatform => _rigidBody.IsTouching(_platform);
+    /*private bool _isOnPlatform => _rigidBody.IsTouching(_platform);
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
@@ -19,17 +33,18 @@ public class PlayerController : MonoBehaviour
         {
             _rigidBody.AddForce(UnityEngine.Vector2.up * _jumpForce, ForceMode2D.Impulse);
         }
-    }
+    }*/
     public void Rotate()
     {
 
     }
     [SerializeField] GameObject playerObject;
     Coroutine rotationCoroutine;
+    public float nextDistroy = 0f;
     private void Update()
     {
         animator.SetBool("IsFlying 0", false);
-        if (Input.GetKeyDown(KeyCode.W))
+        /*if (gameObject.activeSelf)
         {
             if (rotationCoroutine == null)
             {
@@ -49,12 +64,28 @@ public class PlayerController : MonoBehaviour
             {
                 rotationCoroutine = StartCoroutine(RotatePlayerSmoothly(90.0f, 1.0f));
             }
-        }
-        if (Input.GetKeyDown(KeyCode.D))
+        }*/
+        if (top.activeSelf || left.activeSelf || right.activeSelf || bottom.activeSelf)
         {
             if (rotationCoroutine == null)
             {
                 rotationCoroutine = StartCoroutine(RotatePlayerSmoothly(-90.0f, 1.0f));
+            }
+            if (top.activeSelf && nextDistroy < Time.time)
+            {
+                top.SetActive(false);
+            }
+            else if (left.activeSelf && nextDistroy < Time.time)
+            {
+                left.SetActive(false);
+            }
+            else if (right.activeSelf && nextDistroy < Time.time)
+            {
+                right.SetActive(false);
+            }
+            else if (bottom.activeSelf && nextDistroy < Time.time)
+            {
+                bottom.SetActive(false);
             }
         }
     }

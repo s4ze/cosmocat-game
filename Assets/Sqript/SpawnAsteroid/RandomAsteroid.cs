@@ -110,13 +110,6 @@ public class RandomAsteroid : MonoBehaviour
 
     void Update()           
     {
-        //Debug.Log(ship.allMetal >= levelLogic[level]);
-        //Debug.Log(ship == null);
-        Debug.Log("AllMetal: " + ShipLogic.Instance.allMetal);
-        Debug.Log("Array contents: " + string.Join(", ", levelLogic));
-
-        //Debug.Log(level);
-        Debug.Log("Level Logic: "+levelLogic[level]);
         if (level < 7 && ShipLogic.Instance.allMetal >= levelLogic[level])
          {
                         level++;
