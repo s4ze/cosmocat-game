@@ -42,7 +42,8 @@ public class BottomPlatformLogic : MonoBehaviour
             {
                 ShipLogic.Instance.freely[2] = 0;
                 health = health2;
-                Destroy(gameObject);
+
+                gameObject.SetActive(false);
             }
 
         }

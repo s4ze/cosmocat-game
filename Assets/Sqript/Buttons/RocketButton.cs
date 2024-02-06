@@ -159,27 +159,23 @@ public class RocketButton : MonoBehaviour
     void TopActive()
     {
         ShipLogic.Instance.freely[0] = 1;
-        Debug.Log("T1: " + ShipLogic.Instance.freely[0]);
         top.SetActive(true);
     }
     void BottomActive()
     {
         ShipLogic.Instance.freely[2] = 1;
-        Debug.Log("B1: " + ShipLogic.Instance.freely[2]);
         bottom.SetActive(true);
     }
     void LeftActive()
     {
 
         ShipLogic.Instance.freely[3] = 1;
-        Debug.Log("L1: " + ShipLogic.Instance.freely[3]);
         left.SetActive(true);
     }
     void RightActive()
     {
 
         ShipLogic.Instance.freely[1] = 1;
-        Debug.Log("R1: " + ShipLogic.Instance.freely[1]);
         right.SetActive(true);
     }
     private void OnMouseDown()
@@ -203,7 +199,7 @@ public class RocketButton : MonoBehaviour
             {
                 rightPreview.SetActive(true);
             }
-            Debug.Log("R" + !EnergyButton.Instance.Proof());
+            
             nextSpawn = Time.time + time;
             ShipLogic.Instance.metal -= coast;
         }

@@ -42,7 +42,8 @@ public class RIghtPlatformLogic : MonoBehaviour
             {
                 ShipLogic.Instance.freely[1] = 0;
                 health = health2;
-                Destroy(gameObject);
+
+                gameObject.SetActive(false);
             }
 
         }
