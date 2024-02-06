@@ -184,7 +184,7 @@ public class RocketButton : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (nextSpawn < Time.time && ShipLogic.Instance.metal >= coast && !topPreview.activeSelf && !bottomPreview.activeSelf && !leftPreview.activeSelf && !rightPreview.activeSelf && !EnergyButton.Instance.Proof())
+        if (nextSpawn < Time.time && ShipLogic.Instance.metal >= coast && !topPreview.activeSelf && !bottomPreview.activeSelf && !leftPreview.activeSelf && !rightPreview.activeSelf && !EnergyButton.Instance.Proof() && !ShieldButton.Instance.Proof())
         {
 
             if (!top.activeSelf && ShipLogic.Instance.freely[0] == 0)

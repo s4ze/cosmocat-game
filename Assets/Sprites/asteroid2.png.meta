@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ff760d0c6ffa4b54aab32ae21c05753c
+guid: a3dbaecc91142ba4b9a8c82af6ba3a33
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -108,75 +108,40 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: asteroid3_0
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 2
-        width: 24
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34ad218c298f37b4c87e058b623d738e
-      internalID: 1999518335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline:
-    - - {x: 10, y: 4.5}
-      - {x: 10, y: 5.5}
-      - {x: 7, y: 5.5}
-      - {x: 7, y: 6.5}
-      - {x: 3, y: 6.5}
-      - {x: 3, y: 7.5}
-      - {x: -6, y: 7.5}
-      - {x: -6, y: 6.5}
-      - {x: -8, y: 6.5}
-      - {x: -8, y: 5.5}
-      - {x: -9, y: 5.5}
-      - {x: -9, y: 3.5}
-      - {x: -10, y: 3.5}
-      - {x: -10, y: 2.5}
-      - {x: -11, y: 2.5}
-      - {x: -11, y: 0.5}
-      - {x: -12, y: 0.5}
-      - {x: -12, y: -3.5}
-      - {x: -11, y: -3.5}
-      - {x: -11, y: -4.5}
-      - {x: -9, y: -4.5}
-      - {x: -9, y: -5.5}
-      - {x: -8, y: -5.5}
-      - {x: -8, y: -6.5}
-      - {x: -7, y: -6.5}
-      - {x: -7, y: -7.5}
-      - {x: 1, y: -7.5}
-      - {x: 1, y: -6.5}
-      - {x: 2, y: -6.5}
-      - {x: 2, y: -5.5}
-      - {x: 3, y: -5.5}
-      - {x: 3, y: -4.5}
-      - {x: 4, y: -4.5}
-      - {x: 4, y: -3.5}
-      - {x: 6, y: -3.5}
-      - {x: 6, y: -1.5}
-      - {x: 8, y: -1.5}
-      - {x: 8, y: -0.5}
-      - {x: 9, y: -0.5}
-      - {x: 9, y: 0.5}
-      - {x: 10, y: 0.5}
-      - {x: 10, y: 1.5}
-      - {x: 11, y: 1.5}
-      - {x: 11, y: 2.5}
-      - {x: 12, y: 2.5}
-      - {x: 12, y: 4.5}
+    - - {x: 10.5, y: 7.5}
+      - {x: 10.5, y: -1.5}
+      - {x: 9.5, y: -1.5}
+      - {x: 9.5, y: -3.5}
+      - {x: 8.5, y: -3.5}
+      - {x: 8.5, y: -4.5}
+      - {x: 3.5, y: -4.5}
+      - {x: 3.5, y: -5.5}
+      - {x: 2.5, y: -5.5}
+      - {x: 2.5, y: -8.5}
+      - {x: 1.5, y: -8.5}
+      - {x: 1.5, y: -9.5}
+      - {x: -6.5, y: -9.5}
+      - {x: -6.5, y: -10.5}
+      - {x: -8.5, y: -10.5}
+      - {x: -8.5, y: -9.5}
+      - {x: -9.5, y: -9.5}
+      - {x: -9.5, y: -2.5}
+      - {x: -10.5, y: -2.5}
+      - {x: -10.5, y: 2.5}
+      - {x: -11.5, y: 2.5}
+      - {x: -11.5, y: 6.5}
+      - {x: -9.5, y: 6.5}
+      - {x: -9.5, y: 7.5}
+      - {x: -8.5, y: 7.5}
+      - {x: -8.5, y: 8.5}
+      - {x: -5.5, y: 8.5}
+      - {x: -5.5, y: 9.5}
+      - {x: 1.5, y: 9.5}
+      - {x: 1.5, y: 10.5}
+      - {x: 9.5, y: 10.5}
+      - {x: 9.5, y: 7.5}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -186,8 +151,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      asteroid3_0: 1999518335
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

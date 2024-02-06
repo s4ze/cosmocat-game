@@ -184,9 +184,9 @@ public class EnergyButton : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (nextSpawn < Time.time && ShipLogic.Instance.metal >= coast && !RocketButton.Instance.Proof())
+        if (nextSpawn < Time.time && ShipLogic.Instance.metal >= coast && !RocketButton.Instance.Proof() && !ShieldButton.Instance.Proof())
         {
-            Debug.Log("E" + !RocketButton.Instance.Proof());
+            
             if (!top.activeSelf && ShipLogic.Instance.freely[0] == 0)
             {
                 topPreview.SetActive(true);
