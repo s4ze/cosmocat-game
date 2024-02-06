@@ -1522,9 +1522,18 @@ MonoBehaviour:
   - {fileID: 6470646877335921545, guid: 82f11419c0564ec499e86757e8a40624, type: 3}
   - {fileID: 609324122249070840, guid: 8aaadfb5092447b46a9ce966c92beeee, type: 3}
   - {fileID: 361915258607605692, guid: 42c65e5b8d6355d408c9facb2636bf76, type: 3}
-  bottom: []
-  left: []
-  right: []
+  bottom:
+  - {fileID: 4576924806181829196, guid: ef6903799d541a941a89190e45918329, type: 3}
+  - {fileID: 7256482003633764409, guid: 66a4e29dcf7324e478e303892c67132c, type: 3}
+  - {fileID: 4457230642567639950, guid: ecb13833367744a4fa3edc689ff0cd42, type: 3}
+  left:
+  - {fileID: 6334420975249440754, guid: 5a8b1efbd6b30004ab902fc428798f07, type: 3}
+  - {fileID: 4036231530815124979, guid: 993da950c256ddf409c3b84b28a6c9cc, type: 3}
+  - {fileID: 2949493541437984854, guid: 90733bad2cbe70f4b898272cd8f9328e, type: 3}
+  right:
+  - {fileID: 3519242927161914534, guid: 5b95befa04df1b148abbab5ce2b37c17, type: 3}
+  - {fileID: 2643598859349269542, guid: e2d1357e7abd55545b2bf46c4becb329, type: 3}
+  - {fileID: 2930686550871411324, guid: 4f12ff14b5c90584b8419abbf9f5cad1, type: 3}
   warning: {fileID: 6620158047756553756, guid: da252714f22d7f249ac1cdc27988e564, type: 3}
   xLTop: -6.6
   xRTop: 6
