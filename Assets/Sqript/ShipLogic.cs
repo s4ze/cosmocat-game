@@ -52,8 +52,8 @@ public class ShipLogic : MonoBehaviour
 
     public void NewMetal()
     {
-        metal += 3;
-        allMetal += 3;
+        metal += plusMetal;
+        allMetal += plusMetal;
     }
 
     public void MinusMetal(int i)
