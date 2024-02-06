@@ -4328,9 +4328,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 200
   plusMetal: 5
-  metal: 0
+  metal: 40
   allMetal: 0
-  HP: 0
+  HP: 200
   freely: 00000000000000000000000000000000
   Damage: 3
 --- !u!114 &2121127833
