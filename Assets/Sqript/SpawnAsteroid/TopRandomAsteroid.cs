@@ -6,63 +6,63 @@ using UnityEngine;
 public class TopRandomAsteroid : MonoBehaviour
 {
     [SerializeField]
-    private GameObject obj; // Для объекта, который будем спавнить
+    private GameObject obj; // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
     [SerializeField]
-    private GameObject warning; //Для предупреждения
+    private GameObject warning; //пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
-    //Рандомные значения для спавна
-    float RandX; 
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    float RandX;
     float RandY;
 
-    //Границы спавна
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     [SerializeField]
     private float xLeft = -10.69f;
     [SerializeField]
     private float xRight = 10.72f;
 
-    //Для определения места спавна
+    //пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     Vector2 whereToSpawn;
 
-    //Спокойное время, когда метеоритов нет
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
     [SerializeField]
     private float minBeforeSpawnWave = 5f;
     [SerializeField]
     private float maxBeforeSpawnWave = 5f;
 
-    //Счетчик безмятежного рвемени
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     float nextBeforeSpawnWave = 0f;
 
 
-    //Общая длина волны с мирным временем
+    //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     [SerializeField]
     private float spawnWaveMin = 10f;
     [SerializeField]
     private float spawnWaveMax = 20f;
 
-    //Счетчик волны
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     private float nextSpawnWave = 0f;
 
-    //Для спавна предупреждения
+    //пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     [SerializeField]
     private float warningSpawn = 2f;
     float nextWarningSpawn = 2f;
 
-    //Частота спавна объектов
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     [SerializeField]
     private float spawnRate = 2f;
 
-    //Счетчик следующего спавна объекта
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     float nextSpawn = 0.0f;
 
-    //Максимальное возможное количест во метеоритов
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     [SerializeField]
     private int quantity = 1;
 
 
     void Start()
     {
-        //Задаем базовые значения счетчикам
+        //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         nextBeforeSpawnWave = Time.time + Random.Range(minBeforeSpawnWave, maxBeforeSpawnWave + 1);
         nextSpawnWave = Random.Range(spawnWaveMin, spawnWaveMax + 1);
         nextWarningSpawn = nextBeforeSpawnWave - warningSpawn;
@@ -71,31 +71,31 @@ public class TopRandomAsteroid : MonoBehaviour
     void Update()
     {
 
-        if (Time.time < nextSpawnWave && Time.time > nextBeforeSpawnWave) // Условие при котором начинается налет метеоритов
+        if (Time.time < nextSpawnWave && Time.time > nextBeforeSpawnWave) // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         {
-            
-            if (Time.time > nextSpawn) //Генерация метеоров
+
+            if (Time.time > nextSpawn) //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             {
                 nextSpawn = Time.time + spawnRate;
                 int randomQuantity = Random.Range(1, quantity + 1);
 
-                List<float> currentSpawnedXPositions = new List<float>(); //для хранения значений заспавнишихся элементов
+                List<float> currentSpawnedXPositions = new List<float>(); //пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                 int j = 0;
                 for (int i = 0; i < randomQuantity; i++)
                 {
                     RandX = Random.Range(xLeft, xRight);
 
-                    RandX = NewRandX(RandX, currentSpawnedXPositions, currentSpawnedXPositions.Count); //Проверяем, чтобы новая позиция была достаточно удалена от существующих
+                    RandX = NewRandX(RandX, currentSpawnedXPositions, currentSpawnedXPositions.Count); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
                     whereToSpawn = new Vector2(RandX, 9.5f);
                     currentSpawnedXPositions.Add(RandX);
                     j++;
-                    GameObject Asteroid = Instantiate(obj, whereToSpawn, Quaternion.identity);
+                    GameObject Asteroid = Instantiate(obj, whereToSpawn, GetRandom.GetRandomRotationAngle());
                     Destroy(Asteroid, 3f);
                 }
             }
         }
-        else if (Time.time < nextSpawnWave && Time.time > nextWarningSpawn && nextWarningSpawn > 0) // для спавна предупреждения
+        else if (Time.time < nextSpawnWave && Time.time > nextWarningSpawn && nextWarningSpawn > 0) // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         {
             GameObject Warn = Instantiate(warning, new Vector2(0.03f, 3.54f), Quaternion.identity);
             nextWarningSpawn = 0;
@@ -103,7 +103,7 @@ public class TopRandomAsteroid : MonoBehaviour
         }
 
 
-        if (Time.time > nextSpawnWave) //обновление счетчиков
+        if (Time.time > nextSpawnWave) //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         {
             nextSpawnWave = Time.time + Random.Range(spawnWaveMin, spawnWaveMax + 1); ;
             nextBeforeSpawnWave = Time.time + Random.Range(minBeforeSpawnWave, maxBeforeSpawnWave + 1);
@@ -111,7 +111,7 @@ public class TopRandomAsteroid : MonoBehaviour
         }
     }
 
-    float NewRandX(float RandX, List<float> currentSpawnedXPositions, int attempts) //Проверяем, чтобы новая позиция была достаточно удалена от существующих
+    float NewRandX(float RandX, List<float> currentSpawnedXPositions, int attempts) //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     {
         foreach (float xPos in currentSpawnedXPositions)
         {

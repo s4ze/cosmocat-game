@@ -6,13 +6,13 @@ using UnityEngine;
 public class RandomAsteroid : MonoBehaviour
 {
     [SerializeField]
-    private GameObject top; // Для объекта, который будем спавнить
+    private GameObject top; // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     [SerializeField]
-    private GameObject bottom; // Для объекта, который будем спавнить
+    private GameObject bottom; // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     [SerializeField]
-    private GameObject left; // Для объекта, который будем спавнить
+    private GameObject left; // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     [SerializeField]
-    private GameObject right; // Для объекта, который будем спавнить
+    private GameObject right; // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
     [SerializeField]
     private GameObject warning;
@@ -22,7 +22,7 @@ public class RandomAsteroid : MonoBehaviour
 
     float RandX;
     float RandY;
-    
+
 
     [SerializeField]
     private float xLTop = -10.69f;
@@ -49,11 +49,11 @@ public class RandomAsteroid : MonoBehaviour
     [SerializeField]
     private float[] minBeforeSpawnWave = new float[8];
     [SerializeField]
-    private float[] maxBeforeSpawnWave =  new float[8];
+    private float[] maxBeforeSpawnWave = new float[8];
 
     float nextBeforeSpawnWave = 0f;
 
-    
+
 
 
 
@@ -108,11 +108,11 @@ public class RandomAsteroid : MonoBehaviour
     }
 
 
-    void Update()           
+    void Update()
     {
         if (level < 7 && ShipLogic.Instance.allMetal >= levelLogic[level])
-         {
-                        level++;
+        {
+            level++;
 
         }
         if (Time.time < nextSpawnWave && Time.time > nextBeforeSpawnWave)
@@ -122,59 +122,59 @@ public class RandomAsteroid : MonoBehaviour
                 Destroy(warn[i]);
                 warn[i] = null;
             }*/
-            
+
 
             if (Time.time > nextSpawn)
             {
                 nextSpawn = Time.time + spawnRate[level];
-                foreach(int k in side)
+                foreach (int k in side)
                 {
                     int randomQuantity = Random.Range(1, quantity[level] + 1);
                     int j = 0;
                     List<float> currentSpawnedXPositions = new List<float>();
                     if (k == 0)
                     {
-                        
+
                         for (int i = 0; i < randomQuantity; i++)
                         {
                             RandX = Random.Range(xLTop, xRTop);
 
-                            RandX = NewRandX(RandX, currentSpawnedXPositions, currentSpawnedXPositions.Count); //Проверяем, чтобы новая позиция была достаточно удалена от существующих
+                            RandX = NewRandX(RandX, currentSpawnedXPositions, currentSpawnedXPositions.Count); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
                             whereToSpawn = new Vector2(RandX, 9.5f);
                             currentSpawnedXPositions.Add(RandX);
                             j++;
-                            GameObject Asteroid = Instantiate(top, whereToSpawn, Quaternion.identity);
+                            GameObject Asteroid = Instantiate(top, whereToSpawn, GetRandom.GetRandomRotationAngle());
                             Destroy(Asteroid, 3f);
                         }
                     }
-                    else if(k == 1)
+                    else if (k == 1)
                     {
                         for (int i = 0; i < randomQuantity; i++)
                         {
                             RandX = Random.Range(xLBottom, xRBottom);
 
-                            RandX = NewRandX(RandX, currentSpawnedXPositions, currentSpawnedXPositions.Count); //Проверяем, чтобы новая позиция была достаточно удалена от существующих
+                            RandX = NewRandX(RandX, currentSpawnedXPositions, currentSpawnedXPositions.Count); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
                             whereToSpawn = new Vector2(RandX, -9.11f);
                             currentSpawnedXPositions.Add(RandX);
                             j++;
-                            GameObject Asteroid = Instantiate(bottom, whereToSpawn, Quaternion.identity);
+                            GameObject Asteroid = Instantiate(bottom, whereToSpawn, GetRandom.GetRandomRotationAngle());
                             Destroy(Asteroid, 3f);
                         }
                     }
-                    else if(k == 2)
+                    else if (k == 2)
                     {
                         for (int i = 0; i < randomQuantity; i++)
                         {
                             RandY = Random.Range(yTRight, yBRight);
 
-                            RandY = NewRandX(RandY, currentSpawnedXPositions, currentSpawnedXPositions.Count); //Проверяем, чтобы новая позиция была достаточно удалена от существующих
+                            RandY = NewRandX(RandY, currentSpawnedXPositions, currentSpawnedXPositions.Count); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
                             whereToSpawn = new Vector2(15.08f, RandY);
                             currentSpawnedXPositions.Add(RandY);
                             j++;
-                            GameObject Asteroid = Instantiate(right, whereToSpawn, Quaternion.identity);
+                            GameObject Asteroid = Instantiate(right, whereToSpawn, GetRandom.GetRandomRotationAngle());
                             Destroy(Asteroid, 6f);
                         }
                     }
@@ -184,28 +184,28 @@ public class RandomAsteroid : MonoBehaviour
                         {
                             RandY = Random.Range(yTLeft, yBLeft);
 
-                            RandY = NewRandX(RandY, currentSpawnedXPositions, currentSpawnedXPositions.Count); //Проверяем, чтобы новая позиция была достаточно удалена от существующих
+                            RandY = NewRandX(RandY, currentSpawnedXPositions, currentSpawnedXPositions.Count); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
                             whereToSpawn = new Vector2(-14.87f, RandY);
                             currentSpawnedXPositions.Add(RandY);
                             j++;
-                            GameObject Asteroid = Instantiate(left, whereToSpawn, Quaternion.identity);
+                            GameObject Asteroid = Instantiate(left, whereToSpawn, GetRandom.GetRandomRotationAngle());
                             Destroy(Asteroid, 6f);
                         }
                     }
-                    
+
                 }
 
-}
+            }
         }
-        else if(Time.time < nextSpawnWave && Time.time > nextWarningSpawn && nextWarningSpawn > 0 )
+        else if (Time.time < nextSpawnWave && Time.time > nextWarningSpawn && nextWarningSpawn > 0)
         {
             waveCounter = Random.Range(1, 101);
-            if(waveCounter <= proz[level][0])
+            if (waveCounter <= proz[level][0])
             {
                 waveCounter = 1;
             }
-            else if(waveCounter <= proz[level][1])
+            else if (waveCounter <= proz[level][1])
             {
                 waveCounter = 2;
             }
@@ -215,7 +215,7 @@ public class RandomAsteroid : MonoBehaviour
             }
             //waveCounter = Random.Range(1, maxWave[level]+1);
             List<int> l = new List<int>() { 0, 1, 2, 3 };
-            for (int i = 0;i < waveCounter; i++)
+            for (int i = 0; i < waveCounter; i++)
             {
                 int c = Random.Range(0, l.Count);
                 side.Add(l[c]);
@@ -224,7 +224,7 @@ public class RandomAsteroid : MonoBehaviour
             }
             nextWarningSpawn = 0;
         }
-        
+
 
         if (Time.time > nextSpawnWave)
         {
@@ -243,9 +243,9 @@ public class RandomAsteroid : MonoBehaviour
             if (Mathf.Abs(xPos - RandX) < 3f)
             {
                 RandX += (RandX <= xPos) ? 3f : -3f;
-                if(attempts > 0)
+                if (attempts > 0)
                 {
-                    RandX = NewRandX(RandX , currentSpawnedXPositions, attempts - 1);
+                    RandX = NewRandX(RandX, currentSpawnedXPositions, attempts - 1);
                 }
                 return currentSpawnedXPositions.Max() + 3f;
             }
