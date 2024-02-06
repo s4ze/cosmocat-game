@@ -3,30 +3,29 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float _jumpForce;
-    [SerializeField] private ContactFilter2D _platform;
-    private Rigidbody2D _rigidBody;
-
-    public Animator animator; // ���������� ��� ����
-    private bool _isOnPlatform => _rigidBody.IsTouching(_platform);
-    private void Awake()
+    /*public Transform topPreset;
+    public Transform bottomPreset;
+    public Transform rightPreset;
+    public Transform leftPreset;*/
+    public GameObject leftShield;
+    public GameObject rightShield;
+    public GameObject bottomShield;
+    public GameObject topShield;
+    [SerializeField] GameObject playerObject;
+    Coroutine rotationCoroutine;
+    public void Start()
     {
-        _rigidBody = GetComponent<Rigidbody2D>();
+        shieldPrevewDeactivate();
     }
-    public void Jump()
+    private void OnMouseDown()
     {
-        if (_isOnPlatform)
-        {
-            _rigidBody.AddForce(UnityEngine.Vector2.up * _jumpForce, ForceMode2D.Impulse);
-        }
+
     }
     public void Rotate()
     {
 
     }
-    [SerializeField] GameObject playerObject;
-    Coroutine rotationCoroutine;
-    private void Update()
+    /*public void Update()
     {
         animator.SetBool("IsFlying 0", false);
         if (Input.GetKeyDown(KeyCode.W))
@@ -43,6 +42,9 @@ public class PlayerController : MonoBehaviour
                 rotationCoroutine = StartCoroutine(RotatePlayerMoreSmoothly(-90.0f, 2.5f));
             }
         }
+    }*/
+    private void Update()
+    {
         if (Input.GetKeyDown(KeyCode.A))
         {
             if (rotationCoroutine == null)
@@ -57,6 +59,7 @@ public class PlayerController : MonoBehaviour
                 rotationCoroutine = StartCoroutine(RotatePlayerSmoothly(-90.0f, 1.0f));
             }
         }
+        if (Input.GetKeyDown(KeyCode.Space)) shieldPreviewActivate();
     }
     IEnumerator RotatePlayerMoreSmoothly(float angle, float intensity)
     {
@@ -97,4 +100,26 @@ public class PlayerController : MonoBehaviour
         playerTransform.rotation = targetRotation;
         rotationCoroutine = null; // Reset the coroutine
     }
+    public void shieldPreviewActivate()
+    {
+        topShield.SetActive(true);
+        bottomShield.SetActive(true);
+        rightShield.SetActive(true);
+        leftShield.SetActive(true);
+    }
+    public void shieldPrevewDeactivate()
+    {
+        topShield.SetActive(false);
+        bottomShield.SetActive(false);
+        rightShield.SetActive(false);
+        leftShield.SetActive(false);
+    }
+    public void spawnInPlace()
+    {
+
+    }
+    /*private void CreatePreviews(Transform spawnPoint, float angle)
+    {
+        Instantiate(prefab, spawnPoint.position, Quaternion.AngleAxis(angle, Vector3.forward));
+    }*/
 }
