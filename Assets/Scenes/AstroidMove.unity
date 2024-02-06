@@ -1518,10 +1518,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f10f3e5edc9b624aa4851a25edbf05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top: {fileID: 361915258607605692, guid: 42c65e5b8d6355d408c9facb2636bf76, type: 3}
-  bottom: {fileID: 4457230642567639950, guid: ecb13833367744a4fa3edc689ff0cd42, type: 3}
-  left: {fileID: 4036231530815124979, guid: 993da950c256ddf409c3b84b28a6c9cc, type: 3}
-  right: {fileID: 2930686550871411324, guid: 4f12ff14b5c90584b8419abbf9f5cad1, type: 3}
+  top:
+  - {fileID: 6470646877335921545, guid: 82f11419c0564ec499e86757e8a40624, type: 3}
+  - {fileID: 609324122249070840, guid: 8aaadfb5092447b46a9ce966c92beeee, type: 3}
+  - {fileID: 361915258607605692, guid: 42c65e5b8d6355d408c9facb2636bf76, type: 3}
+  bottom: []
+  left: []
+  right: []
   warning: {fileID: 6620158047756553756, guid: da252714f22d7f249ac1cdc27988e564, type: 3}
   xLTop: -6.6
   xRTop: 6

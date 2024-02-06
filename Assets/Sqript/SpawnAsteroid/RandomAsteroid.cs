@@ -6,13 +6,13 @@ using UnityEngine;
 public class RandomAsteroid : MonoBehaviour
 {
     [SerializeField]
-    private GameObject top; // ��� �������, ������� ����� ��������
+    private GameObject[] top = new GameObject[3]; // ��� �������, ������� ����� ��������
     [SerializeField]
-    private GameObject bottom; // ��� �������, ������� ����� ��������
+    private GameObject[] bottom = new GameObject[3]; // ��� �������, ������� ����� ��������
     [SerializeField]
-    private GameObject left; // ��� �������, ������� ����� ��������
+    private GameObject[] left = new GameObject[3]; // ��� �������, ������� ����� ��������
     [SerializeField]
-    private GameObject right; // ��� �������, ������� ����� ��������
+    private GameObject[] right = new GameObject[3]; // ��� �������, ������� ����� ��������
 
     [SerializeField]
     private GameObject warning;
@@ -144,7 +144,7 @@ public class RandomAsteroid : MonoBehaviour
                             whereToSpawn = new Vector2(RandX, 9.5f);
                             currentSpawnedXPositions.Add(RandX);
                             j++;
-                            GameObject Asteroid = Instantiate(top, whereToSpawn, GetRandom.GetRandomRotationAngle());
+                            GameObject Asteroid = Instantiate(top[Random.Range(0,3)], whereToSpawn, GetRandom.GetRandomRotationAngle());
                             Destroy(Asteroid, 3f);
                         }
                     }
@@ -159,7 +159,7 @@ public class RandomAsteroid : MonoBehaviour
                             whereToSpawn = new Vector2(RandX, -9.11f);
                             currentSpawnedXPositions.Add(RandX);
                             j++;
-                            GameObject Asteroid = Instantiate(bottom, whereToSpawn, GetRandom.GetRandomRotationAngle());
+                            GameObject Asteroid = Instantiate(bottom[Random.Range(0, 3)], whereToSpawn, GetRandom.GetRandomRotationAngle());
                             Destroy(Asteroid, 3f);
                         }
                     }
@@ -174,7 +174,7 @@ public class RandomAsteroid : MonoBehaviour
                             whereToSpawn = new Vector2(15.08f, RandY);
                             currentSpawnedXPositions.Add(RandY);
                             j++;
-                            GameObject Asteroid = Instantiate(right, whereToSpawn, GetRandom.GetRandomRotationAngle());
+                            GameObject Asteroid = Instantiate(right[Random.Range(0, 3)], whereToSpawn, GetRandom.GetRandomRotationAngle());
                             Destroy(Asteroid, 6f);
                         }
                     }
@@ -189,7 +189,7 @@ public class RandomAsteroid : MonoBehaviour
                             whereToSpawn = new Vector2(-14.87f, RandY);
                             currentSpawnedXPositions.Add(RandY);
                             j++;
-                            GameObject Asteroid = Instantiate(left, whereToSpawn, GetRandom.GetRandomRotationAngle());
+                            GameObject Asteroid = Instantiate(left[Random.Range(0, 3)], whereToSpawn, GetRandom.GetRandomRotationAngle());
                             Destroy(Asteroid, 6f);
                         }
                     }
