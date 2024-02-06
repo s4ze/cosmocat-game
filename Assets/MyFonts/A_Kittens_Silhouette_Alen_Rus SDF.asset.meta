@@ -1,8 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sqript/FieldShip.meta
+guid: 09f24a6cc273e7c40be4594e5159c1e2
+folderAsset: yes
+DefaultImporter:
+========
 guid: 1361f3ffe0c919b44a6590b8fe780291
 NativeFormatImporter:
+>>>>>>>> new-main:Assets/MyFonts/A_Kittens_Silhouette_Alen_Rus SDF.asset.meta
   externalObjects: {}
-  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

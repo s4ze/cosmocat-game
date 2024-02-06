@@ -3,12 +3,26 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
     [SerializeField] private float _jumpForce;
     [SerializeField] private ContactFilter2D _platform;
     private Rigidbody2D _rigidBody;
 
+    public GameObject top;
+    public GameObject bottom;
+    public GameObject left;
+    public GameObject right;
+
     public Animator animator; // ���������� ��� ����
-    private bool _isOnPlatform => _rigidBody.IsTouching(_platform);
+    /*private bool _isOnPlatform => _rigidBody.IsTouching(_platform);
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
@@ -19,17 +33,19 @@ public class PlayerController : MonoBehaviour
         {
             _rigidBody.AddForce(UnityEngine.Vector2.up * _jumpForce, ForceMode2D.Impulse);
         }
-    }
+    }*/
     public void Rotate()
     {
 
     }
     [SerializeField] GameObject playerObject;
     Coroutine rotationCoroutine;
+    public float nextDistroy = 0f;
     private void Update()
     {
+
         animator.SetBool("IsFlying 0", false);
-        if (Input.GetKeyDown(KeyCode.W))
+        /*if (gameObject.activeSelf)
         {
             if (rotationCoroutine == null)
             {
@@ -49,12 +65,37 @@ public class PlayerController : MonoBehaviour
             {
                 rotationCoroutine = StartCoroutine(RotatePlayerSmoothly(90.0f, 1.0f));
             }
-        }
-        if (Input.GetKeyDown(KeyCode.D))
+        }*/
+        if (top.activeSelf || left.activeSelf || right.activeSelf || bottom.activeSelf)
         {
             if (rotationCoroutine == null)
             {
+                AudioManager.instance.Play("Rocket");
                 rotationCoroutine = StartCoroutine(RotatePlayerSmoothly(-90.0f, 1.0f));
+            }
+            if (top.activeSelf && nextDistroy < Time.time)
+            {
+                ShipLogic.Instance.freely[0] = 0;
+                Debug.Log("T: " + ShipLogic.Instance.freely[0]);
+                top.SetActive(false);
+            }
+            else if (left.activeSelf && nextDistroy < Time.time)
+            {
+                ShipLogic.Instance.freely[3] = 0;
+                Debug.Log("L: " + ShipLogic.Instance.freely[3]);
+                left.SetActive(false);
+            }
+            else if (right.activeSelf && nextDistroy < Time.time)
+            {
+                ShipLogic.Instance.freely[1] = 0;
+                Debug.Log("R: " + ShipLogic.Instance.freely[1]);
+                right.SetActive(false);
+            }
+            else if (bottom.activeSelf && nextDistroy < Time.time)
+            {
+                ShipLogic.Instance.freely[2] = 0;
+                Debug.Log("B: " + ShipLogic.Instance.freely[2]);
+                bottom.SetActive(false);
             }
         }
     }
@@ -86,12 +127,14 @@ public class PlayerController : MonoBehaviour
         float elapsedTime = 0.0f;
         while (elapsedTime < duration)
         {
+            
             float t = Mathf.SmoothStep(0.0f, 1.0f, elapsedTime / duration);
             playerTransform.rotation = Quaternion.Slerp(startRotation, targetRotation, t);
             elapsedTime += Time.deltaTime;
             yield return null;
             //�������� �� ����� ���� ��� ����������
             animator.SetBool("IsFlying 0", true);
+            
         }
 
         playerTransform.rotation = targetRotation;

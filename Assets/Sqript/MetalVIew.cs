@@ -20,7 +20,7 @@ public class MetalVIew : MonoBehaviour
     {
         if (metal != null && myTextMeshPro != null)
         {
-            myTextMeshPro.text = metal.allMetal.ToString();
+            myTextMeshPro.text = metal.metal.ToString();
         }
     }
 }

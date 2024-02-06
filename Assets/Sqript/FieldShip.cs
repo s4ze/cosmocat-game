@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class FieldShip : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject field;
+    public static FieldShip Instance;
 
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+    
     [SerializeField]
     private float recharge = 5f;
 
     float nextField = 0f;
+
+    float nextDistroy = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +30,20 @@ public class FieldShip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (/*Time.time > nextField && */Input.GetKeyDown(KeyCode.S))
+        if (gameObject.activeSelf && nextDistroy < Time.time)
         {
-            GameObject Asteroid = Instantiate(field, new Vector2(0,0), Quaternion.identity);
-           /* Destroy(Asteroid, 3f);
-            nextField = Time.time + 3f + recharge;*/
+            gameObject.SetActive(false);
         }
+        
+    }
+
+    public void NewView(int i)
+    {
+        if (i == 0)
+        {
+            gameObject.SetActive(true);
+            nextDistroy = Time.time + 10f;
+        }
+        
     }
 }

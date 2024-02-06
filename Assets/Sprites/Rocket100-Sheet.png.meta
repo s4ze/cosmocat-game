@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ff760d0c6ffa4b54aab32ae21c05753c
+guid: 8e78d7c6572fca44c809aafefc95cfe9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 3
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +53,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -110,84 +110,104 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: asteroid3_0
+      name: Rocket100-Sheet_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
-        width: 24
-        height: 15
+        x: 2
+        y: 37
+        width: 29
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34ad218c298f37b4c87e058b623d738e
-      internalID: 1999518335
+      spriteID: 3da8ac17af4355a43b7c3470f3d3a9be
+      internalID: 1441437101
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline:
-    - - {x: 10, y: 4.5}
-      - {x: 10, y: 5.5}
-      - {x: 7, y: 5.5}
-      - {x: 7, y: 6.5}
-      - {x: 3, y: 6.5}
-      - {x: 3, y: 7.5}
-      - {x: -6, y: 7.5}
-      - {x: -6, y: 6.5}
-      - {x: -8, y: 6.5}
-      - {x: -8, y: 5.5}
-      - {x: -9, y: 5.5}
-      - {x: -9, y: 3.5}
-      - {x: -10, y: 3.5}
-      - {x: -10, y: 2.5}
-      - {x: -11, y: 2.5}
-      - {x: -11, y: 0.5}
-      - {x: -12, y: 0.5}
-      - {x: -12, y: -3.5}
-      - {x: -11, y: -3.5}
-      - {x: -11, y: -4.5}
-      - {x: -9, y: -4.5}
-      - {x: -9, y: -5.5}
-      - {x: -8, y: -5.5}
-      - {x: -8, y: -6.5}
-      - {x: -7, y: -6.5}
-      - {x: -7, y: -7.5}
-      - {x: 1, y: -7.5}
-      - {x: 1, y: -6.5}
-      - {x: 2, y: -6.5}
-      - {x: 2, y: -5.5}
-      - {x: 3, y: -5.5}
-      - {x: 3, y: -4.5}
-      - {x: 4, y: -4.5}
-      - {x: 4, y: -3.5}
-      - {x: 6, y: -3.5}
-      - {x: 6, y: -1.5}
-      - {x: 8, y: -1.5}
-      - {x: 8, y: -0.5}
-      - {x: 9, y: -0.5}
-      - {x: 9, y: 0.5}
-      - {x: 10, y: 0.5}
-      - {x: 10, y: 1.5}
-      - {x: 11, y: 1.5}
-      - {x: 11, y: 2.5}
-      - {x: 12, y: 2.5}
-      - {x: 12, y: 4.5}
+    - serializedVersion: 2
+      name: Rocket100-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 25
+        width: 36
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2501c31102e1d64c89ee02d1cd3a48c
+      internalID: -394576045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocket100-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 12
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ddf3bc537ee3e44c90daf9c0abb9530
+      internalID: 1315227391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocket100-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e333365f8a2c2246ab2eac83254d937
+      internalID: 1689522658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      asteroid3_0: 1999518335
+      Rocket100-Sheet_0: 1441437101
+      Rocket100-Sheet_1: -394576045
+      Rocket100-Sheet_2: 1315227391
+      Rocket100-Sheet_3: 1689522658
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

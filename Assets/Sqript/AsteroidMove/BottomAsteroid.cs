@@ -12,6 +12,8 @@ public class BottomAsteroid : MonoBehaviour
 
     float speed;
 
+    
+
     private Vector2 newPos; // Используемая переменная для новой позиции
 
     // Start is called before the first frame update
