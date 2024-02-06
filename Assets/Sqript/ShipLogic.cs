@@ -52,16 +52,12 @@ public class ShipLogic : MonoBehaviour
 
     public void NewMetal()
     {
-<<<<<<< HEAD
+
         metal += plusMetal;
         allMetal += plusMetal;
-=======
-        metal += 3;
-        allMetal += 3;
-        AudioManager.instance.Play("CollectMetal");
->>>>>>> 41cb0ef504a2cc038e255011b3378ae8b4d6c110
-    }
 
+        AudioManager.instance.Play("CollectMetal");
+    }
     public void MinusMetal(int i)
     {
         metal -= i;
