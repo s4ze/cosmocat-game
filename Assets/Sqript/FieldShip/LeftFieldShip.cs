@@ -33,6 +33,8 @@ public class LeftFieldShip : MonoBehaviour
     {
         if (gameObject.activeSelf && nextDistroy < Time.time)
         {
+            ShipLogic.Instance.freely[3] = 0;
+            Debug.Log("L2: " + ShipLogic.Instance.freely[3]);
             gameObject.SetActive(false);
         }
 

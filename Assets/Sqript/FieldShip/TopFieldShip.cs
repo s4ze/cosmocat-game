@@ -33,6 +33,8 @@ public class TopFieldShip : MonoBehaviour
     {
         if (gameObject.activeSelf && nextDistroy < Time.time)
         {
+            ShipLogic.Instance.freely[0] = 0;
+            Debug.Log("T2: " + ShipLogic.Instance.freely[0]);
             gameObject.SetActive(false);
         }
 

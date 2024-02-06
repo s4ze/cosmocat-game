@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     public float nextDistroy = 0f;
     private void Update()
     {
+
         animator.SetBool("IsFlying 0", false);
         /*if (gameObject.activeSelf)
         {
@@ -73,18 +74,26 @@ public class PlayerController : MonoBehaviour
             }
             if (top.activeSelf && nextDistroy < Time.time)
             {
+                ShipLogic.Instance.freely[0] = 0;
+                Debug.Log("T: " + ShipLogic.Instance.freely[0]);
                 top.SetActive(false);
             }
             else if (left.activeSelf && nextDistroy < Time.time)
             {
+                ShipLogic.Instance.freely[3] = 0;
+                Debug.Log("L: " + ShipLogic.Instance.freely[3]);
                 left.SetActive(false);
             }
             else if (right.activeSelf && nextDistroy < Time.time)
             {
+                ShipLogic.Instance.freely[1] = 0;
+                Debug.Log("R: " + ShipLogic.Instance.freely[1]);
                 right.SetActive(false);
             }
             else if (bottom.activeSelf && nextDistroy < Time.time)
             {
+                ShipLogic.Instance.freely[2] = 0;
+                Debug.Log("B: " + ShipLogic.Instance.freely[2]);
                 bottom.SetActive(false);
             }
         }

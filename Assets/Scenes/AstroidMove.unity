@@ -3967,6 +3967,7 @@ MonoBehaviour:
   metal: 300
   allMetal: 300
   HP: 0
+  freely: 00000000000000000000000000000000
   Damage: 3
 --- !u!114 &2121127833
 MonoBehaviour:
@@ -4009,8 +4010,8 @@ MonoBehaviour:
     maxNormalAngle: 0
   top: {fileID: 1729947233}
   bottom: {fileID: 1358636088}
-  left: {fileID: 500579052}
-  right: {fileID: 17755926}
+  left: {fileID: 17755926}
+  right: {fileID: 500579052}
   animator: {fileID: 270520256}
   playerObject: {fileID: 2121127827}
   nextDistroy: 0

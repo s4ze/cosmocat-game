@@ -19,6 +19,8 @@ public class ShipLogic : MonoBehaviour
 
     public static ShipLogic Instance;
 
+    public int[] freely = { 0, 0, 0, 0};
+
     private void Awake()
     {
         if (Instance == null)

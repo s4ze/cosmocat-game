@@ -14,7 +14,15 @@ public class RocketButton : MonoBehaviour
     public GameObject rightPreview;
     // Start is called before the first frame update
     public int coast;
+    public static RocketButton Instance;
 
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
     public GameObject boat;
     public float time = 0f;
     float nextSpawn = 0f;
@@ -149,48 +157,79 @@ public class RocketButton : MonoBehaviour
         PlayerController.Instance.nextDistroy = Time.time + 0.8f;
     }
     void TopActive()
-        {
+    {
+        ShipLogic.Instance.freely[0] = 1;
+        Debug.Log("T1: " + ShipLogic.Instance.freely[0]);
         top.SetActive(true);
     }
     void BottomActive()
     {
+        ShipLogic.Instance.freely[2] = 1;
+        Debug.Log("B1: " + ShipLogic.Instance.freely[2]);
         bottom.SetActive(true);
     }
     void LeftActive()
     {
+
+        ShipLogic.Instance.freely[3] = 1;
+        Debug.Log("L1: " + ShipLogic.Instance.freely[3]);
         left.SetActive(true);
     }
     void RightActive()
     {
+
+        ShipLogic.Instance.freely[1] = 1;
+        Debug.Log("R1: " + ShipLogic.Instance.freely[1]);
         right.SetActive(true);
     }
     private void OnMouseDown()
-    {   if(nextSpawn < Time.time && ShipLogic.Instance.metal >= coast && !topPreview.activeSelf && !bottomPreview.activeSelf && !leftPreview.activeSelf && !rightPreview.activeSelf)
+    {
+        if (nextSpawn < Time.time && ShipLogic.Instance.metal >= coast && !topPreview.activeSelf && !bottomPreview.activeSelf && !leftPreview.activeSelf && !rightPreview.activeSelf && !EnergyButton.Instance.Proof())
         {
-            
-                if (!top.activeSelf)
-                {
-                    topPreview.SetActive(true);
-                }
-                if (!bottom.activeSelf)
-                {
-                    bottomPreview.SetActive(true);
-                }
-                if (!left.activeSelf)
-                {
-                    leftPreview.SetActive(true);
-                }
-                if (!right.activeSelf)
-                {
-                    rightPreview.SetActive(true);
-                }
 
-
+            if (!top.activeSelf && ShipLogic.Instance.freely[0] == 0)
+            {
+                topPreview.SetActive(true);
+            }
+            if (!bottom.activeSelf && ShipLogic.Instance.freely[2] == 0)
+            {
+                bottomPreview.SetActive(true);
+            }
+            if (!left.activeSelf && ShipLogic.Instance.freely[3] == 0)
+            {
+                leftPreview.SetActive(true);
+            }
+            if (!right.activeSelf && ShipLogic.Instance.freely[1] == 0)
+            {
+                rightPreview.SetActive(true);
+            }
+            Debug.Log("R" + !EnergyButton.Instance.Proof());
             nextSpawn = Time.time + time;
             ShipLogic.Instance.metal -= coast;
         }
-       
     }
+    public bool Proof()
+        {
+            bool t = false;
+            if (topPreview.activeSelf && ShipLogic.Instance.freely[0] == 0)
+            {
+                t = true;
+            }
+            if (bottomPreview.activeSelf && ShipLogic.Instance.freely[2] == 0)
+            {
+                t= true;
+            }
+            if (leftPreview.activeSelf && ShipLogic.Instance.freely[3] == 0)
+            {
+                t=(true);
+            }
+            if (rightPreview.activeSelf && ShipLogic.Instance.freely[1] == 0)
+            {
+                t=(true);
+            }
+            return t;
+        }
+       
 
     
 

@@ -33,6 +33,8 @@ public class ButtomFieldShip : MonoBehaviour
     {
         if (gameObject.activeSelf && nextDistroy < Time.time)
         {
+            ShipLogic.Instance.freely[2] = 0;
+            Debug.Log("B2: " + ShipLogic.Instance.freely[2]);
             gameObject.SetActive(false);
         }
 
